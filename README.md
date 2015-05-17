@@ -21,16 +21,17 @@ Files:
 - Type `exit` to log out your VM.
 - Type `vagrant halt` to turn off your VM.
 
-###How to test the project:
+###How to create the initial database:
 
 - Login into your VM.
 - Go to Vagrant folder `cd \vagrant`
-- Create the database schema typing `psql`, then type `CREATE DATABASE tournament;` command
+- In your VM, type `psql` to access PostgreSQL console.
+- Create the database schema typing `CREATE DATABASE tournament;`
+- Finally use the command `\i tournament.sql` to import the tables and views into psql.
+
+###How to test the project:
+
 - Type `python tournament_test.py`
-
-###How to access the PostgreSQL:
-
-- In your VM, type `psql`
 
 
 ## Author
